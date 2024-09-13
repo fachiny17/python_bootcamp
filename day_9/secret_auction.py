@@ -19,8 +19,18 @@ while not bidding_finished:
     price =int(input("What is your bid? $"))
     bids[name] = price
     should_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n")
-    if should_continue == "no":
+    if should_continue == "yes":
+        clear()
+    if should_continue == "Yes":
+        clear()
+    if should_continue == "YES":
+        clear()    
+    elif should_continue == "no":
         bidding_finished = True
         find_highest_bidder(bids)
-    elif should_continue == "yes":
-        clear()
+    elif should_continue == "No":
+        bidding_finished = True
+        find_highest_bidder(bids)
+    elif should_continue == "NO":
+        bidding_finished = True
+        find_highest_bidder(bids)
