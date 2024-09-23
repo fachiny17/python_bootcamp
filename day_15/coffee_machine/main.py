@@ -24,6 +24,8 @@ MENU = {
     }
 }
 
+print("Welcome to Somitry Coffee Machine")
+customer_name = input("What is your name?")
 profit = 0
 
 resources = {
@@ -49,6 +51,24 @@ def process_coins():
     total += int(input("how many pennies?: ")) * 0.01
     return  total
 
+def is_transaction_successful(money_receiveed,drink_cost):
+    """Returns True when the payment is accepted, or False if money is insufficient."""
+    if money_receiveed >= drink_cost:
+        change = round(money_receiveed - drink_cost, 2)
+        print(f"You have ${change} in change remaining.")
+        global profit
+        profit += drink_cost
+        return True
+    else:
+        print("Sorry there's not enough money. Money refunded!")
+        return False
+    
+def make_coffee(drink_name, order_ingredients):
+    """Deduct the required ingredients from the resources."""
+    for item in order_ingredients:
+        resources[item] -= order_ingredients[item]
+    print(f"Dear {customer_name}, your {drink_name} 🧂 is ready.")
+
 is_on = True
 
 while is_on:
@@ -63,3 +83,6 @@ while is_on:
     else:
         drink = MENU[choice]
         if is_resource_sufficient(drink["ingredients"]):
+            payment = process_coins()
+            make_coffee(choice, drink["ingredients"])
+            is_transaction_successful(payment, drink["cost"])
