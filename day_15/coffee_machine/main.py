@@ -51,7 +51,7 @@ def process_coins():
     total += int(input("how many pennies?: ")) * 0.01
     return  total
 
-def is_transaction_successful(money_receiveed,drink_cost):
+def is_transaction_successful(money_receiveed, drink_cost):
     """Returns True when the payment is accepted, or False if money is insufficient."""
     if money_receiveed >= drink_cost:
         change = round(money_receiveed - drink_cost, 2)
