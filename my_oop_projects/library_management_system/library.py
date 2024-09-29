@@ -14,4 +14,10 @@ class Library:
                 return
         print(f"The book '{title}' not fond in the library.")
     
-    def display_book
+    def display_books(self):
+        if not self.books:
+            print("The library is emoty!")
+        else:
+            print("Books in library are: ")
+            for book in self.books:
+                print(book)

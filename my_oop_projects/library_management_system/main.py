@@ -21,4 +21,4 @@ while True:
         title = input("Enter the name of the book: ")
         library.remove_book(title)
     elif choice in ["3","Display Book"]:
-        l
+        library.display_books()
