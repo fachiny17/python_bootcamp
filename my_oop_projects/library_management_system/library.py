@@ -13,3 +13,5 @@ class Library:
                 print(f"The book '{title}' has been removed from library.")
                 return
         print(f"The book '{title}' not fond in the library.")
+    
+    def display_book
