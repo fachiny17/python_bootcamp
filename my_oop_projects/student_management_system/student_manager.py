@@ -15,7 +15,7 @@ class StudentManager:
         print("Student not found.")
         
     def display_students(self, student_id):
-        if student_id not in self.studnts:
+        if not self.students:
             print("No student available.")
         else:
             print("Students List:")

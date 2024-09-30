@@ -24,7 +24,7 @@ while True:
         student_manager.remove_student(student_id)
         
     elif choice in ["3","Display Student"]:
-        student_manager.display_students()
+        student_manager.display_students(student_id)
         
     elif choice in ["4", "Exit"]:
         print("Exiting the Student Management System. Gye!")
