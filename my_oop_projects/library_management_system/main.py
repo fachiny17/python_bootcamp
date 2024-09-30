@@ -22,3 +22,6 @@ while True:
         library.remove_book(title)
     elif choice in ["3","Display Book"]:
         library.display_books()
+    elif choice in ["4","Exit"]:
+        print("Exiting the library. Bye!")
+        break

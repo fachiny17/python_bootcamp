@@ -8,7 +8,7 @@ class Library:
     
     def remove_book(self, title):
         for book in self.books:
-            if self.title == title:
+            if book.title == title:
                 self.books.remove(book)
                 print(f"The book '{title}' has been removed from library.")
                 return
