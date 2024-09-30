@@ -16,7 +16,7 @@ class Library:
     
     def display_books(self):
         if not self.books:
-            print("The library is emoty!")
+            print("The library is empty!")
         else:
             print("Books in library are: ")
             for book in self.books:
