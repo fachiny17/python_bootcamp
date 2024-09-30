@@ -15,7 +15,7 @@ while True:
     if choice in ["1","Add Book"]: # same as if choice == "1" or if choice == "Add Book"
         title = input("Enter the name of the book: ")
         author = input("Enter the name of the author: ")
-        book = Book(author, title)
+        book = Book(title, author)
         library.add_book(book)
     elif choice in ["2","Remove Book"]:
         title = input("Enter the name of the book: ")
