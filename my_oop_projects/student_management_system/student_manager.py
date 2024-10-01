@@ -20,4 +20,4 @@ class StudentManager:
         else:
             print("Students List:")
             for student in self.students:
-                print(student)
+                print(student)  
