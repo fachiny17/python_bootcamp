@@ -32,4 +32,16 @@ while True:
     print("1. Deposit")
     print("2. Withdraw")
     print("3. Check Balanace")    
+    print("4. Exit")
     
+    choice = input("Enter your choice from the above options: ")
+    
+    if choice in ["1","Deposit"]:
+        amount = float(input("Enter amount to deposit: "))
+        account.deposit(amount)
+    
+    elif choice in ["2","Withdraw"]:
+        amount = float(input("Entr the amount to withdraw: "))
+        account.withdraw(amount)
+        
+    elif 
