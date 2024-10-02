@@ -1,21 +1,17 @@
 class BankAccount:
-    def __init__(self, account_number, owner, balance):
+    def __init__(self, account_number, owner, balance=0):
         self.account_number = account_number
         self.owner = owner
         self.balance = balance
-        
-    balance = 0
-        
+                
     def __str__(self):
         return f"Owner: {self.owner}, Account number: {self.account_number}, Account Balance: {self.balance}"
     
     def deposit(self, amount):
-        amount = input("Enter the amount you want to deposit: ")
         self.balance += amount
         print(f"Deposited ${amount}. New balance is ${self.balance}")
         
     def withdraw(self, amount):
-        amount = input("Entr the amount you want to withdraw: ")
         if amount <= self.balance:
             self.balance -= amount
             print(f"Debit alert! \nDear {self.owner}, you have successfully withdrawn ${amount}. New balance is ${self.balance}. \nThanks for banking with us.")
@@ -44,4 +40,12 @@ while True:
         amount = float(input("Entr the amount to withdraw: "))
         account.withdraw(amount)
         
-    elif 
+    elif choice in ["3","Check Balance"]:
+        account.check_balance()
+        
+    elif choice in ["4","Exit"]:
+        print("Exiting the Bank Account Management System. GoodBye!")
+        break
+    
+    else:
+        print("Invalid choice. Please choose from the options provided above.")
