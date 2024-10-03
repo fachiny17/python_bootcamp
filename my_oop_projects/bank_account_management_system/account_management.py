@@ -22,7 +22,7 @@ class BankAccount:
         print(f"Account balance: ${self.balance}")
         
 
-account = BankAccount()
+account = BankAccount("01234567", "Chisom")
 while True:
     print("\nBank Account Menu")
     print("1. Deposit")
@@ -37,14 +37,14 @@ while True:
         account.deposit(amount)
     
     elif choice in ["2","Withdraw"]:
-        amount = float(input("Entr the amount to withdraw: "))
+        amount = float(input("Enter the amount to withdraw: "))
         account.withdraw(amount)
         
     elif choice in ["3","Check Balance"]:
         account.check_balance()
         
     elif choice in ["4","Exit"]:
-        print("Exiting the Bank Account Management System. GoodBye!")
+        print("Exiting the Bank Account Management System. Thanks for banking with us!")
         break
     
     else:
