@@ -21,8 +21,9 @@ class BankAccount:
     def check_balance(self):
         print(f"Account balance: ${self.balance}")
         
-
-account = BankAccount("01234567", "Chisom")
+account_number = input("Enter account number: ")
+owner = input("Enter your name: ")
+account = BankAccount(account_number, owner)
 while True:
     print("\nBank Account Menu")
     print("1. Deposit")
