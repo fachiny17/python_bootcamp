@@ -4,8 +4,8 @@ class BankAccount:
         self.owner = owner
         self.balance = balance
                 
-    def __str__(self):
-        return f"Owner: {self.owner}, Account number: {self.account_number}, Account Balance: {self.balance}"
+    #def __str__(self):
+     #   return f"Owner: {self.owner}, Account number: {self.account_number}, Account Balance: {self.balance}"
     
     def deposit(self, amount):
         self.balance += amount
@@ -16,7 +16,7 @@ class BankAccount:
             self.balance -= amount
             print(f"Debit alert! \nDear {self.owner}, you have successfully withdrawn ${amount}. New balance is ${self.balance}. \nThanks for banking with us.")
         else:
-            print(f"Insufficient balance! \nYou cannot withdraw ${amount} because your balance is only {self.balance}.")
+            print(f"Insufficient balance! \nYou cannot withdraw ${amount} because your balance is only ${self.balance}")
         
     def check_balance(self):
         print(f"Account balance: ${self.balance}")
