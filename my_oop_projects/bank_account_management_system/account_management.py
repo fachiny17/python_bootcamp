@@ -28,7 +28,7 @@ while True:
     print("1. Deposit")
     print("2. Withdraw")
     print("3. Check Balanace")    
-    print("4. Exit") 
+    print("4. Exit")
     
     choice = input("Enter your choice from the above options: ")
     
