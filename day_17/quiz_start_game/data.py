@@ -1,3 +1,5 @@
+# The questions were gotten from Open Trivia Database: (opentdb.com)
+
 question_data = [
     {
         "type": "boolean",
