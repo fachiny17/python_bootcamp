@@ -1,3 +1,5 @@
+# turtle documentation can be found in docs.python.org/3/library/turtle.html
+
 from turtle import Turtle, Screen
 
 timmy_turtle = Turtle()
