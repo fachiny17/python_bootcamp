@@ -7,13 +7,48 @@ from turtle import Turtle, Screen
 multi = Turtle()
 
 multi.shape("turtle")
-multi.color("brown")
 
 for triangle in range(3):
+    multi.color("brown")
     multi.right(120)
     multi.forward(100)
 
-for
+for square in range(4):
+    multi.color("yellow")
+    multi.right(90)
+    multi.forward(100)
+
+for pentagon in range(5):
+    multi.color("green")
+    multi.right(72)
+    multi.forward(100)
+
+for hexagon in range(6):
+    multi.color("red")
+    multi.right(60)
+    multi.forward(100)
+
+for heptagon in range(7):
+    multi.color("black")
+    multi.right(51.43)
+    multi.forward(100)
+
+for octagon in range(8):
+    multi.color("pink")
+    multi.right(45)
+    multi.forward(100)
+
+for nonagon in range(9):
+    multi.color("purple")
+    multi.right(40)
+    multi.forward(100)
+
+for decagon in range(10):
+    multi.color("indigo")
+    multi.right(36)
+    multi.forward(100)
 
 screen = Screen()
 screen.exitonclick()
+
+# Excellently done. Congrats! for doing this yourself
