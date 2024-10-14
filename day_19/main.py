@@ -4,17 +4,25 @@ tim = Turtle()
 screen = Screen()
 
 
-# def move_forward():
-#    tim.forward(10)
-
-def movement(move_forward, move_backward):
-    move_forward = tim.forward(10)
-    move_backward = tim.backward(10)
+def move_forward():
+    tim.forward(10)
 
 
-movement(move_forward=10, move_backward=10)
+def move_backward():
+    tim.backward(10)
 
-screen.listen()()
-screen.onkey(key="w", fun=move_forward)
-screen.onkey(key="w", fun=move_backward)
+
+def turn_left():
+    tim.left(10)
+
+
+def turn_right():
+    tim.right(10)
+
+
+screen.listen()
+screen.onkey(move_forward, "f")
+screen.onkey(move_backward, "b")
+screen.onkey(turn_left, "l")
+screen.onkey(turn_right, "r")
 screen.exitonclick()
