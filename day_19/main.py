@@ -23,7 +23,7 @@ def turn_right():
 def clear():
     tim.clear()
     tim.penup()
-    tim.clear()
+    tim.home()
     tim.pendown()
 
 
