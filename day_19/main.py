@@ -26,7 +26,7 @@ if user_choice:
 
 while is_race_on:
     if user_choice not in colors:
-        print("invalid color")
+        print("Invalid color, please colors should be among "+", ".join(colors))
         is_race_on = False
     else:
         for turtle in all_turtles:
@@ -40,6 +40,6 @@ while is_race_on:
                     print(f"You've lost! The {
                           winning_color} turtle is the winner.")
             rand_distance = random.randint(0, 10)
-        turtle.forward(rand_distance)
+            turtle.forward(rand_distance)
 
 screen.exitonclick()
