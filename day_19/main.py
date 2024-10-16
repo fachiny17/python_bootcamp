@@ -26,7 +26,9 @@ if user_choice:
 
 while is_race_on:
     if user_choice not in colors:
-        print("Invalid color, please colors should be among "+", ".join(colors))
+        # print("Invalid color, please colors should be among "+", ".join(colors))
+        print(f"Invalid color, please colors should be among {
+              ', '.join(colors)}.")
         is_race_on = False
     else:
         for turtle in all_turtles:
