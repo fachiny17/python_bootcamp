@@ -8,10 +8,13 @@ class Scoreboard(Turtle):
         self.color("white")
         self.penup()
         self.goto(0, 270)
+        self.update_scoreboard()
+        self.hideturtle()
+
+    def update_scoreboard(self):
         self.write(f"Score: {self.score}", align="center",
                    font=("Arial", 24, "normal"))
 
-    def score(self):
-
-        for num in self.score:
-            pass
+    def increase_score(self):
+        self.score += 1
+        self.update_scoreboard()
