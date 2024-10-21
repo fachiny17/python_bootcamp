@@ -20,6 +20,10 @@ screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
+user_choice = screen.textinput(
+    title="Make your choice", prompt="Do you want to start game?(yes/no): ")
+options = ["yes", "no"]
+
 game_is_on = True
 while game_is_on:
     screen.update()
@@ -33,7 +37,7 @@ while game_is_on:
         scoreboard.increase_score()
 
     # Detect collision with wall
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+    if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
         game_is_on = False
         scoreboard.game_over()
 
