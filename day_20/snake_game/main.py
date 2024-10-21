@@ -24,8 +24,12 @@ user_choice = screen.textinput(
     title="Make your choice", prompt="Do you want to start game?(yes/no): ")
 options = ["yes", "no"]
 
-game_is_on = True
+if user_choice:
+    game_is_on = True
+
 while game_is_on:
+    if user_choice not in options:
+
     screen.update()
     time.sleep(0.1)
     snake.move()
