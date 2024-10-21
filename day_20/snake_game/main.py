@@ -10,11 +10,9 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
-
 user_choice = screen.textinput(
-    title="Make your choice", prompt="Do you want to start game?(yes/no): ")
+    title="Make your choice", prompt="Do you want to start game?(yes/no):")
 options = ["yes", "no"]
-
 
 snake = Snake()
 food = Food()
@@ -37,6 +35,7 @@ while game_is_on:
     elif user_choice == "no":
         print("Quitting Game!")
         game_is_on = False
+        screen.bye()
 
     else:
         screen.update()
