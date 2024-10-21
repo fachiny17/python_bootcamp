@@ -10,6 +10,12 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
+
+user_choice = screen.textinput(
+    title="Make your choice", prompt="Do you want to start game?(yes/no): ")
+options = ["yes", "no"]
+
+
 snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
@@ -19,10 +25,6 @@ screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
-
-user_choice = screen.textinput(
-    title="Make your choice", prompt="Do you want to start game?(yes/no): ")
-options = ["yes", "no"]
 
 if user_choice:
     game_is_on = True
