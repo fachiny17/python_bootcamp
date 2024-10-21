@@ -33,6 +33,11 @@ while game_is_on:
     if user_choice not in options:
         print(f"Invalid option, please input either {', '.join(options)}.")
         game_is_on = False
+
+    elif user_choice == "no":
+        print("Quitting Game!")
+        game_is_on = False
+
     else:
         screen.update()
         time.sleep(0.1)
