@@ -1,5 +1,4 @@
-from turtle import Turtle
-from turtle import Screen
+from turtle import Turtle, Screen
 
 screen = Screen()
 screen.setup(width=800, height=600)
@@ -11,7 +10,7 @@ paddle.shape("square")
 paddle.color("white")
 paddle.shapesize(stretch_wid=5, stretch_len=1)
 paddle.penup()
-paddle.gotot(350, 0)
+paddle.goto(350, 0)
 
 
 def go_up():
@@ -24,8 +23,8 @@ def go_down():
     paddle.goto(paddle.xcor(), new_y)
 
 
-screen.lsten()
+screen.listen()
 screen.onkey(go_up, "Up")
-screen.onkey(go_up, "Down")
+screen.onkey(go_down, "Down")
 
 screen.exitonclick()
