@@ -21,3 +21,6 @@ class Player(Turtle):
 
     def go_right(self):
         self.setx(self.xcor() + MOVE_DISTANCE)
+
+    def go_left(self):
+        self.setx(self.xcor() - MOVE_DISTANCE)
