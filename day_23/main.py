@@ -36,56 +36,52 @@ def play_game():
             screen.bye()
             return
 
-    while True:  # Loop to reply the game
-        # Initialize game components
-        player = Player()
-        car_manager = CarManager()
-        scoreboard = Scoreboard()
+    player = Player()
+    car_manager = CarManager()
+    scoreboard = Scoreboard()
 
-        # Setup key bindings
-        screen.listen()
-        screen.onkey(player.go_up, "Up")
-        screen.onkey(player.go_down, "Down")
-        screen.onkey(player.go_right, "Right")
-        screen.onkey(player.go_left, "Left")
+    # Setup key bindings
+    screen.listen()
+    screen.onkey(player.go_up, "Up")
+    screen.onkey(player.go_down, "Down")
+    screen.onkey(player.go_right, "Right")
+    screen.onkey(player.go_left, "Left")
 
-        # Main game loop
-        game_is_on = True
-        while game_is_on:
-            time.sleep(0.1)
-            screen.update()
+    # Main game loop
+    game_is_on = True
+    while game_is_on:
+        time.sleep(0.1)
+        screen.update()
 
-            car_manager.create_car()
-            car_manager.move_cars()
+        car_manager.create_car()
+        car_manager.move_cars()
 
-            # Detect when turtle collides with car
-            for car in car_manager.all_cars:
-                if car.distance(player) < 18:
-                    scoreboard.game_over()
-                    game_is_on = False
+        # Detect when turtle collides with car
+        for car in car_manager.all_cars:
+            if car.distance(player) < 18:
+                scoreboard.game_over()
+                game_is_on = False
 
-            # Detect successful crossing
-            if player.is_at_finish_line():
-                player.go_to_start()
-                car_manager.level_up()
-                scoreboard.increase_score()
+        # Detect successful crossing
+        if player.is_at_finish_line():
+            player.go_to_start()
+            car_manager.level_up()
+            scoreboard.increase_score()
 
-        # screen.exitonclick()
+    # screen.exitonclick()
 
-        again_choice = screen.textinput(
-            title="Play Again", prompt="Do you want to play again? (yes/no)").lower()
-        if again_choice == "yes":
-            screen.clear()
-            screen.tracer(0)
-            play_game()
-        elif again_choice == "no":
-            print("Thank you for playing!")
-            screen.bye()
-            break
-        else:
-            print("Invalid choice. Exiting the game.")
-            screen.bye()
-            break
+    again_choice = screen.textinput(
+        title="Play Again", prompt="Do you want to play again? (yes/no)").lower()
+    if again_choice == "yes":
+        screen.clear()
+        screen.tracer(0)
+        play_game()
+    elif again_choice == "no":
+        print("Thank you for playing!")
+        screen.bye()
+    else:
+        print("Invalid choice. Exiting the game.")
+        screen.bye()
 
 
 play_game()

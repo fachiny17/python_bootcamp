@@ -76,9 +76,14 @@ def play_again(screen):
     again_choice = screen.textinput(
         title="Play Again", prompt="Do you want to play again? (yes/no)").lower()
     if again_choice == "yes":
+        screen.clear()
+        screen.tracer(0)
         play_game()
-    else:
+    elif again_choice == 'no':
         print("Thank you for playing!")
+        screen.bye()
+    else:
+        print("Invalid choice. Exiting the game")
         screen.bye()
 
 
