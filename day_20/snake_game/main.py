@@ -60,7 +60,7 @@ def play_game():
             snake.reset()
             # game_is_on = False
             # scoreboard.game_over()
-            # play_again(screen)
+            play_again(screen)
 
         # Detect collision with tail
         for segment in snake.segments[1:]:
@@ -71,7 +71,7 @@ def play_game():
                 snake.reset()
                 # game_is_on = False
                 # scoreboard.game_over()
-                # play_again(screen)
+                play_again(screen)
 
     screen.exitonclick()
 
