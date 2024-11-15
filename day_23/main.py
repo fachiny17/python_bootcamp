@@ -20,7 +20,6 @@ def play_game():
     user_choice = None
 
     # Function to get user choice
-
     def get_user_choice():
         return screen.textinput(title="Make your choice", prompt="Do you want to start the game? (yes/no): ").lower()
 
