@@ -57,9 +57,10 @@ def play_game():
         # Detect collision with wall
         if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
             scoreboard.reset()
+            snake.reset()
             # game_is_on = False
             # scoreboard.game_over()
-            play_again(screen)
+            # play_again(screen)
 
         # Detect collision with tail
         for segment in snake.segments[1:]:
@@ -67,9 +68,10 @@ def play_game():
                 pass
             elif snake.head.distance(segment) < 10:
                 scoreboard.reset()
+                snake.reset()
                 # game_is_on = False
                 # scoreboard.game_over()
-                play_again(screen)
+                # play_again(screen)
 
     screen.exitonclick()
 
