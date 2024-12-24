@@ -58,7 +58,8 @@ def play_game():
         # Detect when turtle collides with car
         for car in car_manager.all_cars:
             if car.distance(player) < 18:
-                scoreboard.game_over()
+                scoreboard.reset()
+                # scoreboard.game_over()
                 game_is_on = False
 
         # Detect successful crossing
