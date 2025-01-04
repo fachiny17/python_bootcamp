@@ -27,3 +27,14 @@ class Car:
 
 my_car = Car(make="Nissan", model="GT-R", colour="Red")
 print(my_car.colour)
+
+
+class Student:
+    def __init__(self, **kwa):
+        self.name = kwa.get("name")
+        self.age = kwa.get("age")
+        self.gender = kwa.get("gender")
+
+
+student = Student(name="Jane", age=14, gender="female")
+print(student.age)
