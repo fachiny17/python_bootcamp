@@ -17,7 +17,7 @@ def action():
     print("Do something")
 
 
-# calls actio() when pressed
+# calls action() when pressed
 button = Button(text="Click Me", command=action)
 button.pack()
 
