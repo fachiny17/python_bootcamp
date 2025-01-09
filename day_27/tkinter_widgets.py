@@ -48,4 +48,10 @@ def spinbox_used():
 
 spinbox = Spinbox(from_=0, to=10, width=5, command=spinbox_used)
 spinbox.pack()
-e
+
+# Scale
+# Called with current scale value.
+
+
+def scale_used(value):
+    print(value)
